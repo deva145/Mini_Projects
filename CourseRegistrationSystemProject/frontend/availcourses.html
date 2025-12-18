@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .course-container {
+            background: #ffffff;
+            padding: 30px;
+            border-radius: 15px;
+            width: 90%;
+            max-width: 850px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        thead {
+            background: #667eea;
+            color: white;
+        }
+
+        th, td {
+            padding: 12px 15px;
+            text-align: center;
+        }
+
+        th {
+            font-size: 15px;
+            letter-spacing: 0.5px;
+        }
+
+        tbody tr {
+            border-bottom: 1px solid #ddd;
+            transition: background 0.3s ease;
+        }
+
+        tbody tr:hover {
+            background: #f1f4ff;
+        }
+
+        tbody tr:nth-child(even) {
+            background: #f9f9f9;
+        }
+
+        @media (max-width: 600px) {
+            th, td {
+                font-size: 13px;
+                padding: 10px;
+            }
+        }
+    </style>
+    <title>Document</title>
+    <script type="text/javascript" src="myscript.js"></script>
+</head>
+<body>
+    <table border="1" >
+        <th>Course Name</th>
+        <th>Trainer</th>
+        <th>Duration in weeks</th>
+
+        <tbody id="courses"></tbody>
+    </table>
+
+    <script>
+        window.onload = function(){
+            showCourses();
+        }
+
+    </script>
+</body>
+</html>
